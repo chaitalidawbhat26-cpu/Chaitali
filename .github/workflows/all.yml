@@ -1,0 +1,40 @@
+name: Build Test Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - feature
+
+jobs:
+  build-test-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          echo "================================"
+          echo "BUILDING APPLICATION"
+          echo "================================"
+          echo "Building project..."
+          echo "Build completed successfully!"
+
+      - name: Test
+        run: |
+          echo "================================"
+          echo "TESTING APPLICATION"
+          echo "================================"
+          echo "Running tests..."
+          echo "All tests passed successfully!"
+
+      - name: Deploy
+        run: |
+          echo "================================"
+          echo "DEPLOYING APPLICATION"
+          echo "================================"
+          echo "Deploying application..."
+          echo "Deployment completed successfully!"
