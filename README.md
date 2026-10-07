@@ -1,1 +1,1 @@
-git practical project
+This project demonstrates Git and GitHub
